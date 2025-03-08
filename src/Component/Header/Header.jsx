@@ -16,9 +16,12 @@ const Header = () => {
                 <p>Fixture</p>
                 <p>Teams</p>
                 <p>Schedules</p>
-                <div className='flex items-center sm:gap-0 md:gap-2 lg:gap-2 border border-[#1313131A] p-2 rounded-xl'>
-                <button className='text-black font-semibold'>0 Coin </button>
-                <img className='w-3' src={coin} alt="" srcset="" />
+                <div className='border border-[#1313131A] p-2 rounded-xl'>
+                <div className="flex flex-col sm:flex-row  gap-2   items-center">
+               <div> <button className="text-black font-semibold">0 Coin</button></div>
+               <div> <img className="w-4" src={coin} alt="" /></div>
+                </div>
+
                 </div>
             </div>
             

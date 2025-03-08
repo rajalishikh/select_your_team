@@ -11,8 +11,8 @@ const Main = () => {
 >
   <div className="flex flex-col items-center justify-center text-center  p-4">
     <img src={baner} alt="Banner" className="mb-4" />
-    <h2 className="text-[#FFFFFF] font-bold">Assemble Your Ultimate Dream 11 Cricket Team</h2>
-    <p className="text-[#FFFFFF]">Beyond Boundaries Beyond Limits</p>
+    <h2 className="text-[#FFFFFF] font-bold sm:text-xl md:text-2xl lg:text-4xl">Assemble Your Ultimate Dream 11 Cricket Team</h2>
+    <p className="text-[#FFFFFFB3]">Beyond Boundaries Beyond Limits</p>
   </div>
 </div>
 
