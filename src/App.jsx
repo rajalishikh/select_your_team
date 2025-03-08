@@ -1,4 +1,5 @@
 import './App.css'
+import Header from './Component/Header/Header'
 import './index.css'
 
 function App() {
@@ -6,7 +7,10 @@ function App() {
   return (
     <>
       
-     <h1 className='text-3xl'>Vite React</h1>
+     
+     <div className='max-w-7xl mx-auto mt-4'>
+     <Header></Header>
+     </div>
       
       
     </>
