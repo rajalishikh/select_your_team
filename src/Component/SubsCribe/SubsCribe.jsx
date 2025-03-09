@@ -8,9 +8,9 @@ const SubsCribe = () => {
             <div>
             <h2 className='text-black font-bold text-center text-3xl'>Subscribe to our Newsletter</h2>
             <p className='text-[#131313B3]'>Get the latest updates and news right in your inbox!</p>
-            <div className='flex gap-5'>
+            <div className='flex flex-col lg:flex-row gap-5'>
                 <input className=' border w-72 p-1 rounded-xl' type="text" name="" id="" placeholder='write your email' />
-                <button className='text-black p-1 rounded-md bg-orange-500 font-bold'>Subscribe</button>
+                <button className='text-black p-1 rounded-md bg-orange-500 font-bold w-auto'>Subscribe</button>
             </div>
             </div>
             </div>
