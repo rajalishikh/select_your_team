@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Sachin",
+    "img_link": "https://i.ibb.co.com/mVHG1FXQ/1.jpg",
+    "batting_hand": "Right-handed",
+    "price": 1000000,
+    "country": "India",
+    "player_type": "Batsman",
+    "button": "Choose Player"
+  },
+  {
+    "id": 2,
+    "name": "Sir Don Bradman",
+    "img_link": "https://i.ibb.co.com/hFG9KnxV/2.jpg",
+    "batting_hand": "Right-handed",
+    "price": 1500000,
+    "country": "Australia",
+    "player_type": "Batsman",
+    "button": "Choose Player"
+  },
+  {
+    "id": 3,
+    "name": "Virat Kohli",
+    "img_link": "https://i.ibb.co.com/rK8gZFxy/3.jpg",
+    "batting_hand": "Right-handed",
+    "price": 1200000,
+    "country": "India",
+    "player_type": "Batsman",
+    "button": "Choose Player"
+  },
+  {
+    "id": 4,
+    "name": "Brian Lara",
+    "img_link": "https://i.ibb.co.com/pj10XtM2/4.jpg",
+    "batting_hand": "Left-handed",
+    "price": 1300000,
+    "country": "West Indies",
+    "player_type": "Batsman",
+    "button": "Choose Player"
+  },
+  {
+    "id": 5,
+    "name": "Ricky Ponting",
+    "img_link": "https://i.ibb.co.com/DPz8PBs6/5.jpg",
+    "batting_hand": "Right-handed",
+    "price": 1100000,
+    "country": "Australia",
+    "player_type": "Batsman",
+    "button": "Choose Player"
+  },
+  {
+    "id": 6,
+    "name": "MS Dhoni",
+    "img_link": "https://i.ibb.co.com/gMZ8GTVJ/6.jpg",
+    "batting_hand": "Right-handed",
+    "price": 1400000,
+    "country": "India",
+    "player_type": "Wicketkeeper",
+    "button": "Choose Player"
+  },
+  {
+    "id": 7,
+    "name": "Sir Garfield Sobers",
+    "img_link": "https://i.ibb.co.com/JjtFX7CJ/7.jpg",
+    "batting_hand": "Left-handed",
+    "price": 1600000,
+    "country": "West Indies",
+    "player_type": "All-rounder",
+    "button": "Choose Player"
+  },
+  {
+    "id": 8,
+    "name": "Shane Warne",
+    "img_link": "https://i.ibb.co.com/n88xdLWz/8.jpg",
+    "batting_hand": "Right-handed",
+    "price": 1200000,
+    "country": "Australia",
+    "player_type": "Bowler",
+    "button": "Choose Player"
+  },
+  {
+    "id": 9,
+    "name": "Jacques Kallis",
+    "img_link": "https://i.ibb.co.com/tTdz6B5B/9.jpg",
+    "batting_hand": "Right-handed",
+    "price": 1300000,
+    "country": "South Africa",
+    "player_type": "All-rounder",
+    "button": "Choose Player"
+  },
+  {
+    "id": 10,
+    "name": "Kumar Sangakkara",
+    "img_link": "https://i.ibb.co.com/WNGq4j5X/10.jpg",
+    "batting_hand": "Left-handed",
+    "price": 1100000,
+    "country": "Sri Lanka",
+    "player_type": "Wicketkeeper",
+    "button": "Choose Player"
+  },
+  {
+    "id": 11,
+    "name": "Sir Viv Richards",
+    "img_link": "https://i.ibb.co.com/60Y67ZGx/11.jpg",
+    "batting_hand": "Right-handed",
+    "price": 1500000,
+    "country": "West Indies",
+    "player_type": "Batsman",
+    "button": "Choose Player"
+  },
+  {
+    "id": 12,
+    "name": "Mahmudullah",
+    "img_link": "https://i.ibb.co.com/Q11N8vX/12.jpg",
+    "batting_hand": "Right-handed",
+    "price": 1000000,
+    "country": "Bangladesh",
+    "player_type": "Batsman",
+    "button": "Choose Player"
+  }
+]
