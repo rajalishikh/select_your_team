@@ -1,4 +1,5 @@
 import './App.css'
+import Footer from './Component/Footer/Footer'
 import Header from './Component/Header/Header'
 import Main from './Component/Main/main'
 import Player from './Component/Player/Player'
@@ -14,8 +15,8 @@ function App() {
      <Header></Header>
      <Main></Main>
      <Player></Player>
-     
      </div>
+     <Footer></Footer>
       
       
     </>

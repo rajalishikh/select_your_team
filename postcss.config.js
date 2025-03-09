@@ -1,6 +1,7 @@
 export default {
   plugins: {
-    tailwindcss: {},
-    autoprefixer: {},
+    'postcss-import': {}, // @import রুলস হ্যান্ডেল করে
+    'tailwindcss': {},    // Tailwind CSS
+    'autoprefixer': {},   // ভেন্ডর প্রিফিক্স যোগ করে
   },
 }
