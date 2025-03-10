@@ -12,6 +12,8 @@ import './index.css'
 
 function App() {
   const[show,setShow]=useState(false)
+  const[player,setPlayer]=useState([])
+  
   
   const display=()=>{
     setShow(false)
@@ -23,21 +25,21 @@ function App() {
   const[money,setMoney]=useState(0)
   const addMoney=()=>{
     notify()
-    const newMoneyAdd=money+1000000;
-    setMoney(newMoneyAdd)
-    console.log("Add my money",money)
-    
+    setMoney(money+1000000)
+  
   }
+  console.log("Add my money",money)
   // function for chose player
 
-  const chosePlayer=(price,player_category)=>{
+  const chosePlayer=(price,player_category,name,img_link)=>{
     notify2()
-    console.log("Player",price)
-    console.log("Player",player_category)
-    
     setMoney(money-price)
-
-  }
+    let obj={name,img_link,player_category}
+    const newArray=[...player,obj]
+    setPlayer(newArray)
+    console.log(player)
+}
+console.log(player)
   // React Toast 
  const notify=()=>{
   toast('Money has been added successfully', {
@@ -70,20 +72,16 @@ function App() {
   
   return (
     <div>
-     
-     
-     <div className='max-w-7xl mx-auto mt-4 '>
+     <div className='max-w-7xl mx-auto mt-4'>
      <Header money={money}></Header>
      <Main addMoney={addMoney} ></Main>
      <Player show={show} display={display} display2={display2} chosePlayer={chosePlayer} myMoney={money}></Player>
-     <Selected show={show}></Selected>
+     <Selected show={show} Selected={player}></Selected>
      </div>
      <div className='max-w-7xl mx-auto relative md:top-2 lg:top-32 border h-68 bg-[#FFFFFF26] p-3 rounded-md'>
      <SubsCribe></SubsCribe>
      </div>
-     
      <Footer></Footer>
-      
      <ToastContainer />
     </div>
   )

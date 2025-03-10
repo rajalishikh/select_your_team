@@ -14,7 +14,12 @@ const Player = ({show,display,display2,chosePlayer,myMoney}) => {
         <div className='mt-10'>
             {/* available player section  */}
             <div className='flex justify-between mb-4'>
-                <div><h2 className='text-black font-bold text-2xl'>Available Players</h2></div>
+                {
+                   show || <div><h2 className='text-black font-bold text-2xl'>Available Players</h2></div>
+                }
+                {
+                    show && <div><h2 className='text-black font-bold text-2xl'>Selected Player(0/6)</h2></div>
+                }
                 <div className='border border-[#1313131A] p-2 rounded-xl '>
                     <button onClick={display} className='hover:bg-yellow-400 p-2 rounded-xl '>Available</button>
                     <button onClick={display2} className='hover:bg-yellow-400 p-2 rounded-xl '>Selected <span>(0)</span></button>

@@ -42,7 +42,7 @@ const Player_details = ({details,chosePlayer,myMoney}) => {
             </div>
             <div className='flex justify-between'>
                 <p className='tex-sm font-bold'>PRICE:${price}</p>
-                <button onClick={()=>myMoney>= price? chosePlayer(price,batting_hand):notify2()} className='text-[#131313B3] text-sm border p-1 rounded-xl' >{button}</button>
+                <button onClick={()=>myMoney>= price? chosePlayer(price,batting_hand,name,img_link):notify2()} className='text-[#131313B3] text-sm border p-1 rounded-xl' >{button}</button>
             </div>
             
             

@@ -1,14 +1,16 @@
 import React from 'react';
+import Selected_details from '../Selected_details/Selected_details';
 
-const Selected = ({show}) => {
+const Selected = ({show,Selected}) => {
     return (
         <div>
             {
-                show && <div className='flex border mt-3 p-3 rounded-xl'> 
+                show && <div> 
                 
                 <div>
-                    <h2>Name</h2>
-                    <p>Category</p>
+                    {
+                        Selected.map((item,idx)=><Selected_details key={idx} item={item}></Selected_details>)
+                    }
                 </div>
             </div>
             }
