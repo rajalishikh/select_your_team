@@ -16,8 +16,8 @@ const Player = ({show,display,display2}) => {
             <div className='flex justify-between mb-4'>
                 <div><h2 className='text-black font-bold text-2xl'>Available Players</h2></div>
                 <div className='border border-[#1313131A] p-2 rounded-xl '>
-                    <button onClick={display2} className='hover:bg-yellow-400 p-2 rounded-xl '>Available</button>
-                    <button onClick={display} className='hover:bg-yellow-400 p-2 rounded-xl '>Selected <span>(0)</span></button>
+                    <button onClick={display} className='hover:bg-yellow-400 p-2 rounded-xl '>Available</button>
+                    <button onClick={display2} className='hover:bg-yellow-400 p-2 rounded-xl '>Selected <span>(0)</span></button>
                 </div>
             </div>
             {/* player container section  */}

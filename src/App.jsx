@@ -11,11 +11,12 @@ import './index.css'
 
 function App() {
   const[show,setShow]=useState(false)
+  
   const display=()=>{
-    setShow(true)
+    setShow(false)
   }
   const display2=()=>{
-    setShow(false)
+    setShow(true)
   }
   const[money,setMoney]=useState(0)
   // React Toast 
