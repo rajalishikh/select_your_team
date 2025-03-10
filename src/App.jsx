@@ -13,6 +13,7 @@ import './index.css'
 function App() {
   const[show,setShow]=useState(false)
   const[player,setPlayer]=useState([])
+  const[player_number,set_player_number]=useState(0)
   
   
   const display=()=>{
@@ -32,12 +33,13 @@ function App() {
   // function for chose player
 
   const chosePlayer=(price,player_category,name,img_link)=>{
+    
     notify2()
     setMoney(money-price)
     let obj={name,img_link,player_category}
     const newArray=[...player,obj]
     setPlayer(newArray)
-    console.log(player)
+    set_player_number(player_number+1)
 }
 console.log(player)
   // React Toast 
@@ -75,7 +77,7 @@ console.log(player)
      <div className='max-w-7xl mx-auto mt-4'>
      <Header money={money}></Header>
      <Main addMoney={addMoney} ></Main>
-     <Player show={show} display={display} display2={display2} chosePlayer={chosePlayer} myMoney={money}></Player>
+     <Player show={show} display={display} display2={display2} chosePlayer={chosePlayer} myMoney={money} number_player={player_number}></Player>
      <Selected show={show} Selected={player}></Selected>
      </div>
      <div className='max-w-7xl mx-auto relative md:top-2 lg:top-32 border h-68 bg-[#FFFFFF26] p-3 rounded-md'>
