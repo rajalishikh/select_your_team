@@ -40,9 +40,9 @@ const Player_details = ({details,chosePlayer,myMoney}) => {
                 <p className='tex-sm font-bold'>{batting_hand}</p>
                 <p className='text-[#131313B3] text-sm'>{batting_hand}</p>
             </div>
-            <div className='flex justify-between'>
+            <div className='flex justify-between items-center'>
                 <p className='tex-sm font-bold'>PRICE:${price}</p>
-                <button onClick={()=>myMoney>= price? chosePlayer(price,batting_hand,name,img_link):notify2()} className='text-[#131313B3] text-sm border p-1 rounded-xl' >{button}</button>
+                <button  onClick={()=>myMoney>= price? chosePlayer(price,batting_hand,name,img_link):notify2()} className='text-[#131313B3] text-sm border p-2 rounded-md hover:bg-orange-600 hover:text-white font-medium' >{button}</button>
             </div>
             
             
