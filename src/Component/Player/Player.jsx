@@ -9,7 +9,7 @@ const Player = () => {
         .then(data=>setPlayer(data))
         
     },[])
-    console.log(player)
+    
     return (
         <div className='mt-10'>
             {/* available player section  */}

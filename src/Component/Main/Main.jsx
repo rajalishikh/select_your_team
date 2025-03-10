@@ -2,7 +2,7 @@ import React from 'react';
 import Ba from "../../assets/img/banner-main.png";
 import background from "../../assets/img/bg-shadow.png";
 
-const Main = () => {
+const Main = ({addMoney}) => {
     return (
 
         <div 
@@ -14,7 +14,7 @@ const Main = () => {
     <h2 className="text-[#FFFFFF] font-bold sm:text-xl md:text-2xl lg:text-4xl">Assemble Your Ultimate Dream 11 Cricket Team</h2>
     <p className="text-[#FFFFFFB3]">Beyond Boundaries Beyond Limits</p>
     <div className='border border-[#E7FE29] rounded-xl'>
-                <button className='text-[#131313] bg-[#E7FE29] m-2 p-2 font-bold rounded-xl'>
+                <button onClick={addMoney} className='text-[#131313] bg-[#E7FE29] m-2 p-2 font-bold rounded-xl'>
                 Claim Free Credit
                 </button>
    </div>

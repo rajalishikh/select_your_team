@@ -7,7 +7,7 @@ const Footer = () => {
             <div>
             <div className='flex justify-center items-center'>
                 <div>
-                    <img src={logo} alt="" srcset="" />
+                    <img src={logo}  />
 
                 </div>
             </div>

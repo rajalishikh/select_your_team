@@ -6,7 +6,7 @@ const Player_details = ({details}) => {
     const {name,img_link,batting_hand,price,button,player_type,country}=details
     return (
         <div className='border p-3 rounded-xl '>
-            <img className='w-full h-80 rounded-xl' src={img_link} alt="" srcSet="" />
+            <img className='w-full h-80 rounded-xl' src={img_link}   />
             <h2 className='flex mt-2 text-black font-bold'><GrUserManager />{name}</h2>
             <div className='flex justify-between items-center border-b'>
                 <div className='flex'>
