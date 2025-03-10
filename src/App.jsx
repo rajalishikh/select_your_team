@@ -19,13 +19,23 @@ function App() {
   const display2=()=>{
     setShow(true)
   }
+  // function for add money
   const[money,setMoney]=useState(0)
+  const addMoney=()=>{
+    notify()
+    const newMoneyAdd=money+1000000;
+    setMoney(newMoneyAdd)
+    console.log("Add my money",money)
+    
+  }
   // function for chose player
 
   const chosePlayer=(price,player_category)=>{
     notify2()
     console.log("Player",price)
     console.log("Player",player_category)
+    
+    setMoney(money-price)
 
   }
   // React Toast 
@@ -55,13 +65,7 @@ function App() {
     
     });
  }
-  const addMoney=()=>{
-    notify()
-    const newMoneyAdd=money+1000000;
-    setMoney(newMoneyAdd)
-    console.log("Add my money",money)
-    
-  }
+ 
   
   
   return (
