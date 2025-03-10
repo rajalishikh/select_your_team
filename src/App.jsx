@@ -10,6 +10,13 @@ import SubsCribe from './Component/SubsCribe/SubsCribe'
 import './index.css'
 
 function App() {
+  const[show,setShow]=useState(false)
+  const display=()=>{
+    setShow(true)
+  }
+  const display2=()=>{
+    setShow(false)
+  }
   const[money,setMoney]=useState(0)
   // React Toast 
   const notify = () => {
@@ -27,7 +34,6 @@ function App() {
   };
   const addMoney=()=>{
     notify()
-    
     const newMoneyAdd=money+1000000;
     setMoney(newMoneyAdd)
     console.log("Add my money",money)
@@ -41,8 +47,8 @@ function App() {
      <div className='max-w-7xl mx-auto mt-4 '>
      <Header money={money}></Header>
      <Main addMoney={addMoney} toast={notify}></Main>
-     <Player></Player>
-     <Selected></Selected>
+     <Player show={show} display={display} display2={display2}></Player>
+     <Selected show={show}></Selected>
      </div>
      <div className='max-w-7xl mx-auto relative md:top-2 lg:top-32 border h-68 bg-[#FFFFFF26] p-3 rounded-md'>
      <SubsCribe></SubsCribe>
