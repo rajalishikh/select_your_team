@@ -34,6 +34,7 @@ function App() {
 
   const chosePlayer=(price,player_category,name,img_link)=>{
     
+
     notify2()
     setMoney(money-price)
     let obj={name,img_link,player_category}

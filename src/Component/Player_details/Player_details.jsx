@@ -55,8 +55,8 @@ const Player_details = ({details,chosePlayer,myMoney,number_player}) => {
             <div className='flex justify-between items-center'>
                 <p className='tex-sm font-bold'>PRICE:${price}</p>
                 {
-                    number_player <= 11 ? <div> <button  onClick={()=>myMoney >= price? chosePlayer(price,batting_hand,name,img_link):notify2()} className='text-[#131313B3] text-sm border p-2 rounded-md hover:bg-orange-600 hover:text-white font-medium' >{button}</button>
-                    </div>:notify3()
+                    number_player < 11 ? <div> <button  onClick={()=>myMoney >= price? chosePlayer(price,batting_hand,name,img_link):notify2()} className='text-[#131313B3] text-sm border p-2 rounded-md hover:bg-orange-600 hover:text-white font-medium' >{button}</button>
+                    </div>:()=>notify3()
                 }
             </div>
             
