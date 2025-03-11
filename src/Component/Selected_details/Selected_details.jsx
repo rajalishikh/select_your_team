@@ -9,7 +9,7 @@ const Selected_details = ({item}) => {
                 <div className='flex gap-2 items-center'>
                     <img className='w-32' src={img_link} alt="" srcset="" />
                     <div>
-                <p>{name}</p>
+                <p className='text-black font-bold text-xl'>{name}</p>
                 <p>{player_category}</p>
                 </div>
                 </div>
