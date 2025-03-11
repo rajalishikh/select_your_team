@@ -21,8 +21,8 @@ const Player = ({show,display,display2,chosePlayer,myMoney,number_player}) => {
                     show && <div><h2 className='text-black font-bold text-2xl'>Selected Player{number_player}/11</h2></div>
                 }
                 <div className='border border-[#1313131A] p-2 rounded-xl '>
-                    <button onClick={display} className='hover:bg-yellow-400 p-2 rounded-xl '>Available</button>
-                    <button onClick={display2} className='hover:bg-yellow-400 p-2 rounded-xl '>Selected <span>{number_player}</span></button>
+                    <button onClick={display} className='hover:bg-[#E7FE29] p-3 rounded-xl font-bold '>Available</button>
+                    <button onClick={display2} className='hover:bg-[#E7FE29] p-3 rounded-xl font-bold'>Selected <span>{number_player}</span></button>
                 </div>
             </div>
             {/* player container section  */}

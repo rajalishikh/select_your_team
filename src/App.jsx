@@ -79,7 +79,7 @@ console.log(player)
      <Header money={money}></Header>
      <Main addMoney={addMoney} ></Main>
      <Player show={show} display={display} display2={display2} chosePlayer={chosePlayer} myMoney={money} number_player={player_number}></Player>
-     <Selected show={show} Selected={player}></Selected>
+     <Selected show={show} Selected={player} display={display}></Selected>
      </div>
      <div className='max-w-7xl mx-auto relative md:top-2 lg:top-32 border h-68 bg-[#FFFFFF26] p-3 rounded-md'>
      <SubsCribe></SubsCribe>
