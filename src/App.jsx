@@ -60,6 +60,7 @@ const deleteFunction=(id)=>{
   console.log("Delete player",id)
   const delete_data= player.filter(item=>item.id != id)
   setPlayer(delete_data)
+  set_player_number(player_number-1)
 
 }
 
