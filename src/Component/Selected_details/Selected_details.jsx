@@ -1,8 +1,9 @@
 import React from 'react';
 import { MdOutlineDelete } from "react-icons/md";
 
-const Selected_details = ({item}) => {
-    const{player_category,name,img_link}=item
+const Selected_details = ({item,deleteFunction}) => {
+    const{player_category,name,img_link,id}=item
+    console.log("After cliked",item)
     return (
         <div className='border mt-3 p-3 rounded-xl'>
             <div className='flex items-center justify-between'>
@@ -14,7 +15,7 @@ const Selected_details = ({item}) => {
                 </div>
                 </div>
                 <div>
-                    <button className=' text-red-400'><MdOutlineDelete /></button>
+                    <button onClick={()=>deleteFunction(id)} className='text-red-400'><MdOutlineDelete /></button>
 
                 </div>
                 

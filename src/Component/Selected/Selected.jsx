@@ -1,7 +1,7 @@
 import React from 'react';
 import Selected_details from '../Selected_details/Selected_details';
 
-const Selected = ({show,Selected,display}) => {
+const Selected = ({show,Selected,display,deleteFunction}) => {
     return (
         <div>
             {
@@ -9,7 +9,7 @@ const Selected = ({show,Selected,display}) => {
                 
                 <div>
                     {
-                        Selected.map((item,idx)=><Selected_details key={idx} item={item}></Selected_details>)
+                        Selected.map((item,idx)=><Selected_details deleteFunction={deleteFunction} key={idx} item={item}></Selected_details>)
                     }
                 </div>
                 <div className='border border-slate-500 w-40 text-center p-2 rounded-md'>

@@ -14,10 +14,8 @@ function App() {
   const[show,setShow]=useState(false)
   const[player,setPlayer]=useState([])
   const[player_number,set_player_number]=useState(0)
-  const [playerId,setPlayerId]=useState([])
+  const[playerId,setPlayerId]=useState([])
   
-
- 
   
   const display=()=>{
     setShow(false)
@@ -26,7 +24,7 @@ function App() {
     setShow(true)
   }
   // function for add money
-  const[money,setMoney]=useState(500000000000000)
+  const[money,setMoney]=useState(0)
   const addMoney=()=>{
     notify()
     setMoney(money+1000000)
@@ -42,12 +40,10 @@ const chosePlayer=(price,player_category,name,img_link,id)=>{
   }
   if(playerId.length <11){
     const newArray2=[...playerId,id]
-  setPlayerId(newArray2)
-   
-   
+    setPlayerId(newArray2)
     set_player_number(player_number+1)
     setMoney(money - price);
-    let obj = { name, img_link, player_category };
+    let obj = { name, img_link, player_category,id };
     const newArray = [...player, obj];
     setPlayer(newArray);
     notify2()
@@ -59,10 +55,17 @@ const chosePlayer=(price,player_category,name,img_link,id)=>{
     
     
 }
+// delete function
+const deleteFunction=(id)=>{
+  console.log("Delete player",id)
+  const delete_data= player.filter(item=>item.id != id)
+  setPlayer(delete_data)
+
+}
 
 
-console.log(player)
-  // React Toast 
+
+  // React Toast section
  const notify=()=>{
   toast('Money has been added successfully', {
     position: "top-center",
@@ -116,16 +119,13 @@ console.log(player)
     });
  }
  
- 
-  
-  
-  return (
+ return (
     <div>
      <div className='max-w-7xl mx-auto mt-4'>
      <Header money={money}></Header>
      <Main addMoney={addMoney} ></Main>
      <Player show={show} display={display} display2={display2} chosePlayer={chosePlayer} myMoney={money} number_player={player_number} playerId={playerId}></Player>
-     <Selected show={show} Selected={player} display={display}></Selected>
+     <Selected show={show} Selected={player} display={display} deleteFunction={deleteFunction}></Selected>
      </div>
      <div className='max-w-7xl mx-auto relative md:top-2 lg:top-32 border h-68 bg-[#FFFFFF26] p-3 rounded-md'>
      <SubsCribe></SubsCribe>
