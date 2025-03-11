@@ -4,8 +4,9 @@ import { GrUserManager } from "react-icons/gr";
 import { toast } from 'react-toastify';
 
 
-const Player_details = ({details,chosePlayer,myMoney,number_player}) => {
-    const {name,img_link,batting_hand,price,button,player_type,country,id}=details;
+const Player_details = ({details,chosePlayer,myMoney,}) => {
+  
+    const {name,img_link,batting_hand,price,button,player_type,country}=details;
     const notify2 = () => {
         toast("You don't have enough money to buy the player. Please add funds to your account", {
             position: "top-center",
@@ -19,19 +20,7 @@ const Player_details = ({details,chosePlayer,myMoney,number_player}) => {
             
             });
     };
-    const notify3 = () => {
-        toast("your limit is over", {
-            position: "top-center",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: false,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-            
-            });
-    };
+    
     return (
         <div>
             <div className='border p-3 rounded-xl '>
@@ -54,10 +43,12 @@ const Player_details = ({details,chosePlayer,myMoney,number_player}) => {
             </div>
             <div className='flex justify-between items-center'>
                 <p className='tex-sm font-bold'>PRICE:${price}</p>
-                {
-                    number_player < 11 ? <div> <button  onClick={()=>myMoney >= price? chosePlayer(price,batting_hand,name,img_link,id):notify2()} className='text-[#131313B3] text-sm border p-2 rounded-md hover:bg-orange-600 hover:text-white font-medium' >{button}</button>
-                    </div>:()=>notify3()
-                }
+                <div> 
+                    <button className='text-[#131313B3] text-sm border p-2 rounded-md hover:bg-orange-600 hover:text-white font-medium'
+                     onClick={()=>myMoney >= price? chosePlayer(price,batting_hand,name,img_link,):notify2()}  >{button}
+
+                    </button>
+                    </div>
             </div>
             
             

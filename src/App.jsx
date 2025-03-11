@@ -14,7 +14,7 @@ function App() {
   const[show,setShow]=useState(false)
   const[player,setPlayer]=useState([])
   const[player_number,set_player_number]=useState(0)
-  const [id_state,setId_state]=useState([])
+  
 
  
   
@@ -25,7 +25,7 @@ function App() {
     setShow(true)
   }
   // function for add money
-  const[money,setMoney]=useState(0)
+  const[money,setMoney]=useState(500000000000000)
   const addMoney=()=>{
     notify()
     setMoney(money+1000000)
@@ -34,27 +34,16 @@ function App() {
   
   // function for chose player
 
-  const chosePlayer=(price,player_category,name,img_link,id)=>{
-    if (id_state.some(item => item.id === id)) {
-      alert("This player is already taken");
-      return;
-  }else{
-    let idObj={id}
-    const new_array_id=[...id_state,idObj]
-    setId_state(new_array_id)
-    
-    
-    notify2()
-    setMoney(money-price)
-    let obj={name,img_link,player_category}
-    const newArray=[...player,obj]
-    setPlayer(newArray)
+  const chosePlayer=(price,player_category,name,img_link)=>{
     set_player_number(player_number+1)
-
-  }
-    
+    setMoney(money - price);
+  let obj = { name, img_link, player_category };
+    const newArray = [...player, obj];
+    setPlayer(newArray);
+    notify2()
+  
 }
-console.log("SetId",id_state)
+
 
 console.log(player)
   // React Toast 
@@ -84,6 +73,7 @@ console.log(player)
     
     });
  }
+ 
  
   
   

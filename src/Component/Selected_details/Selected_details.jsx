@@ -7,7 +7,7 @@ const Selected_details = ({item}) => {
         <div className='border mt-3 p-3 rounded-xl'>
             <div className='flex items-center justify-between'>
                 <div className='flex gap-2 items-center'>
-                    <img className='w-32' src={img_link} alt="" srcset="" />
+                    <img className='w-32' src={img_link}  />
                     <div>
                 <p className='text-black font-bold text-xl'>{name}</p>
                 <p>{player_category}</p>
