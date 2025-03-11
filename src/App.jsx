@@ -37,7 +37,7 @@ function App() {
   
 const chosePlayer=(price,player_category,name,img_link,id)=>{
   if(playerId.includes(id)){
-    alert("The player is all ready taken")
+    notify3()
     return;
   }
   const newArray2=[...playerId,id]
@@ -72,6 +72,19 @@ console.log(player)
  }
  const notify2=()=>{
   toast('Player purchase is complete', {
+    position: "top-center",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: false,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+    
+    });
+ }
+ const notify3=()=>{
+  toast('This player is already purchased by you.', {
     position: "top-center",
     autoClose: 5000,
     hideProgressBar: false,
