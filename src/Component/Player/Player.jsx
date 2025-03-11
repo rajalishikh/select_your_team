@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Player_details from '../Player_details/Player_details';
 
-const Player = ({show,display,display2,chosePlayer,myMoney,number_player}) => {
+const Player = ({show,display,display2,chosePlayer,myMoney,number_player,playerId}) => {
     const [player,setPlayer]=useState([])
     useEffect(()=>{
         fetch("player.json")
@@ -30,7 +30,7 @@ const Player = ({show,display,display2,chosePlayer,myMoney,number_player}) => {
             {
                 show || <div className='grid  md:grid-cols-3 lg:grid-cols-3 gap-4 '>
                 {
-                    player.map(item=><Player_details key={item.id} details={item} chosePlayer={chosePlayer} myMoney={myMoney} number_player={number_player}></Player_details>)
+                    player.map(item=><Player_details key={item.id} details={item} chosePlayer={chosePlayer} myMoney={myMoney} number_player={number_player} playerId={playerId}></Player_details>)
                 }
 
             </div>

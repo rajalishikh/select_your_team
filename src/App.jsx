@@ -40,7 +40,8 @@ const chosePlayer=(price,player_category,name,img_link,id)=>{
     notify3()
     return;
   }
-  const newArray2=[...playerId,id]
+  if(playerId.length <11){
+    const newArray2=[...playerId,id]
   setPlayerId(newArray2)
    
    
@@ -50,6 +51,11 @@ const chosePlayer=(price,player_category,name,img_link,id)=>{
     const newArray = [...player, obj];
     setPlayer(newArray);
     notify2()
+
+  }else{
+    notify4()
+  }
+  
     
     
 }
@@ -96,6 +102,19 @@ console.log(player)
     
     });
  }
+ const notify4=()=>{
+  toast('Your Team is full', {
+    position: "top-center",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: false,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+    
+    });
+ }
  
  
   
@@ -105,7 +124,7 @@ console.log(player)
      <div className='max-w-7xl mx-auto mt-4'>
      <Header money={money}></Header>
      <Main addMoney={addMoney} ></Main>
-     <Player show={show} display={display} display2={display2} chosePlayer={chosePlayer} myMoney={money} number_player={player_number}></Player>
+     <Player show={show} display={display} display2={display2} chosePlayer={chosePlayer} myMoney={money} number_player={player_number} playerId={playerId}></Player>
      <Selected show={show} Selected={player} display={display}></Selected>
      </div>
      <div className='max-w-7xl mx-auto relative md:top-2 lg:top-32 border h-68 bg-[#FFFFFF26] p-3 rounded-md'>

@@ -4,7 +4,8 @@ import { GrUserManager } from "react-icons/gr";
 import { toast } from 'react-toastify';
 
 
-const Player_details = ({details,chosePlayer,myMoney,}) => {
+const Player_details = ({details,chosePlayer,myMoney,playerId}) => {
+    console.log("Total length",playerId.length)
   
     const {name,img_link,batting_hand,price,button,player_type,country,id}=details;
     const notify2 = () => {
