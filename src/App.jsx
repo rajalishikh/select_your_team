@@ -14,6 +14,7 @@ function App() {
   const[show,setShow]=useState(false)
   const[player,setPlayer]=useState([])
   const[player_number,set_player_number]=useState(0)
+  const [playerId,setPlayerId]=useState([])
   
 
  
@@ -31,17 +32,26 @@ function App() {
     setMoney(money+1000000)
   
   }
-  
+ 
   // function for chose player
-
-  const chosePlayer=(price,player_category,name,img_link)=>{
+  
+const chosePlayer=(price,player_category,name,img_link,id)=>{
+  if(playerId.includes(id)){
+    alert("The player is all ready taken")
+    return;
+  }
+  const newArray2=[...playerId,id]
+  setPlayerId(newArray2)
+   
+   
     set_player_number(player_number+1)
     setMoney(money - price);
-  let obj = { name, img_link, player_category };
+    let obj = { name, img_link, player_category };
     const newArray = [...player, obj];
     setPlayer(newArray);
     notify2()
-  
+    
+    
 }
 
 
